@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class Computers(Enum):
-    desktops = 'Desktops',
+    desktops = 'Desktops'
     notebooks = 'Notebooks'
     accessories = 'Accessories'
 

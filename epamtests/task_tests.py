@@ -9,6 +9,7 @@ from pages.register import Register
 from pages.login import Login
 from pages.body import Body
 from pages.cart import Cart
+from enums.computers import Computers
 
 
 class TaskTests(unittest.TestCase):
@@ -46,7 +47,10 @@ class TaskTests(unittest.TestCase):
    #Task 3 is not completed, can not find xpath
     def test_computers_sub_groups(self) -> None:
         page: Header = Header(self.driver)
-        page.get_computers_subgroups()
+        computer_submenu = page.get_submenu_items_from_parent_name()
+        assert (computer_submenu == Computers.list(), 'Computers items are not correct!')
+        print(f'Computer category includes the {page.get_submenu_items_from_parent_name()} subcategories')
+
         #plus function to check whether gotten lost is the same as computers enum
 
     def test_sorting_items(self) -> None:
