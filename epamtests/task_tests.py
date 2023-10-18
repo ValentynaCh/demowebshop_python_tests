@@ -51,8 +51,6 @@ class TaskTests(unittest.TestCase):
         assert (computer_submenu == Computers.list(), 'Computers items are not correct!')
         print(f'Computer category includes the {page.get_submenu_items_from_parent_name()} subcategories')
 
-        #plus function to check whether gotten lost is the same as computers enum
-
     def test_sorting_items(self) -> None:
         self.driver.get('https://demowebshop.tricentis.com/apparel-shoes')
         page_apparel_shoes: Body = Body(self.driver)
